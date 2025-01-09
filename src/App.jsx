@@ -4,12 +4,14 @@
 
 import Navbar from "./pages/Navbar";
 import About from "./pages/About";
+import Counter from "./pages/Counter";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <About />
+      <Counter />
+      {/* <Navbar />
+      <About /> */}
     </div>
   );
 }

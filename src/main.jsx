@@ -8,3 +8,5 @@ createRoot(document.getElementById("root")).render(<App />);
 //tree-> real dom
 
 //components -> data, files
+
+//hooks ->
