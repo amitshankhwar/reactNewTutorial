@@ -30,21 +30,49 @@ function Counter() {
 
   console.log("clicked");
 
-  function handleClick() {
-    // counter++;
-    setCounter(counter + 1);
-    console.log(counter);
-  }
+  // function handleClick() {
+  //   // counter++;
+  //   setCounter(counter + 1);
+  //   console.log(counter);
+  // }
 
-  function handleMinus() {
-    setCounter(counter - 1);
+  // function handleMinus() {
+  //   setCounter(counter - 1);
+  // }
+
+  function handleClick(e) {
+    // if (counter <= 0) {
+    //   setCounter((counter = 0));
+    //   return;
+    // }
+
+    if (e.target.name === "increment") {
+      setCounter(counter + 1);
+    } else if (e.target.name === "decrement") {
+      setCounter(counter - 1);
+    }
   }
 
   return (
     <>
-      <button onClick={handleMinus}>-</button>
+      <button
+        name="decrement"
+        onClick={(e) => {
+          handleClick(e);
+        }}
+      >
+        -
+      </button>
+      {/* <h1>{counter < 0 ? 0 : counter}</h1> */}
       <h1>{counter}</h1>
-      <button onClick={handleClick}>+</button>
+      <button
+        name="increment"
+        onClick={(e) => {
+          handleClick(e);
+        }}
+      >
+        +
+      </button>
     </>
   );
 }
