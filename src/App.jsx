@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Counter from "./pages/Counter";
 import Form from "./pages/Form";
 import "./App.css";
+import DataFetching from "./pages/DataFetching";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <Counter /> */}
       {/* <Navbar />
       <About /> */}
-      <Form />
+      {/* <Form /> */}
+      <DataFetching />
     </>
   );
 }
