@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Card from "./Card";
 
 function DataFetching() {
   const [val, setVal] = useState([]);
@@ -9,7 +10,7 @@ function DataFetching() {
   useEffect(() => {
     async function getData() {
       const response = await fetch(
-        "https://jsonplaceholder.typicode.com/todos"
+        "https://api.unsplash.com/photos/?client_id=qMjwsRR8FgpjKblC3QJtXe9aMyZXnWImYVWmvRBa3mU"
       );
       const data = await response.json();
       console.log(data);
@@ -21,12 +22,19 @@ function DataFetching() {
   }, []);
 
   return (
-    <div>
-      <ul>
-        {val.map((item, idx) => {
-          return <li key={idx}>{item.title}</li>;
-        })}
-      </ul>
+    <div className="imgContainer">
+      {val.map((item, idx) => {
+        // return <img src={item.urls.small} alt="image" key={idx} />;
+        // return (
+        //   <div className="card">
+        //     <p>{item.alt_description}</p>
+        //     <img src={item.urls.small} alt="" />
+        //     <p>likes - {item.likes}</p>
+        //   </div>
+        // );
+
+        return <Card item={item} key={idx} />;
+      })}
     </div>
   );
 }
