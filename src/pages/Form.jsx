@@ -69,6 +69,7 @@
 
 //Best way to handle forms in react
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -76,6 +77,8 @@ const Form = () => {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -86,6 +89,10 @@ const Form = () => {
     e.preventDefault();
 
     console.log(formData);
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   }
 
   return (
