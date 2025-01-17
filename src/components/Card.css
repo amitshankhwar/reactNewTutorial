@@ -1,0 +1,47 @@
+.card-container {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 16px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.rating {
+  font-size: 14px;
+  color: #777;
+}
+
+.rating span {
+  font-weight: bold;
+  color: #333;
+}

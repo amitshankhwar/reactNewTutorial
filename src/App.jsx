@@ -10,16 +10,25 @@ import "./App.css";
 import DataFetching from "./pages/DataFetching";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Page404 from "./pages/Page404";
+import Login from "./pages/Login";
+import UserScreen from "./pages/UserScreen";
+import DataScreen from "./components/DataScreen";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/navbar" element={<Navbar />} />
-          <Route path="/" element={<DataFetching />} />
-          <Route path="about" element={<About />} />
-          <Route path="/form" element={<Form />} />
+          <Route path="/" element={<Navbar />}>
+            <Route path="/" element={<DataFetching />} />
+            <Route path="about" element={<About />} />
+            <Route path="/form" element={<Form />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+
+          <Route path="/user/:id" element={<UserScreen />} />
+          <Route path="/data" element={<DataScreen />} />
+
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
