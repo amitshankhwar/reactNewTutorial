@@ -16,6 +16,8 @@ import DataScreen from "./components/DataScreen";
 import Login from "./components/Login";
 import Auth from "./Auth/Auth";
 
+import OTPComponent from "./components/OTPComponent";
+
 function App() {
   return (
     <>
@@ -37,7 +39,7 @@ function App() {
 
           <Route path="/user/:id" element={<UserScreen />} />
           <Route path="/data" element={<DataScreen />} />
-
+          <Route path="/ref" element={<OTPComponent />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
