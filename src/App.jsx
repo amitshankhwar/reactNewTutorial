@@ -17,6 +17,8 @@ import Login from "./components/Login";
 import Auth from "./Auth/Auth";
 
 import OTPComponent from "./components/OTPComponent";
+import Memo from "./components/Memo";
+import Callback from "./components/Callback";
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
           <Route path="/user/:id" element={<UserScreen />} />
           <Route path="/data" element={<DataScreen />} />
           <Route path="/ref" element={<OTPComponent />} />
+          <Route path="/memo" element={<Memo />} />
+          <Route path="/callback" element={<Callback />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
